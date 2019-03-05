@@ -1,22 +1,20 @@
 # CloudflarePurgeGateway
 - This is a nginx+php based standard Squid/Varnish purge request converter for Cloudflare, in EXPERIMENTAL.
-- Although we develop this program for MediaWiki as substitute of https://github.com/moegirlwiki/MW-Cloudflare/ for backward compatible, It work for all project using standarded Squid/Varnish purge request.
+- Although we develop this program toward MediaWiki as a substitute of https://github.com/moegirlwiki/MW-Cloudflare/ for backward compatibility, It works with any project using standard Squid/Varnish purge request.
 
 
 ## Dependency
 * nginx
 * PHP
-## Install
 
+## Install
+* Set up a nginx v-config monitor port other than 80,443. (e.g. 8080) Set the root path to /cf_purge_gw.
 
 ## Configuration
+* Acquire Cloudflare account email and API key, and fill that info into config.php.
+(Cloudflare Official help page: https://support.cloudflare.com/hc/en-us/articles/200167836-Where-do-I-find-my-Cloudflare-API-key- )
 
+## Security Issue
+At the time we wrote this intro, Cloudflare only offers GLOBAL API KEY toward users not in "Enterprise plan"($5000+). It is possible to acquire original server IP via GLOBAL API KEY. Therefore, it is highly suggested to set config.php with permission 400, and store it in a place not public (not accessible for nginx).
 
 # USE AT YOUR OWN RISK!
-
-
-
-
-
-
-
