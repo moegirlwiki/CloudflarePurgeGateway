@@ -1,0 +1,11 @@
+{
+  "apiEmail": "",
+  "apiKey": "",
+  "hosts": {
+    "zh.moegirl.org": {
+      "zoneId": "",
+      "prefix": "https://zh.moegirl.org"
+    }
+  },
+  "dev": true
+}
