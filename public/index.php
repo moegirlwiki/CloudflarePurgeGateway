@@ -27,5 +27,5 @@ $result = $zones->cachePurge($hostConfig['zoneId'], [
 ]);
 
 if ($conf['dev']) {
-    file_put_contents('./tmplog', "host: {$host}, uri: {$uri}, result: {$result}\n", FILE_APPEND);
+    file_put_contents('../logs/tmplog', "host: {$host}, uri: {$uri}, result: {$result}\n", FILE_APPEND);
 }
