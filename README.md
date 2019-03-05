@@ -15,7 +15,7 @@
 (Cloudflare Official help page: https://support.cloudflare.com/hc/en-us/articles/200167836-Where-do-I-find-my-Cloudflare-API-key- )
 * set the previous port in your software as a Squid/Varnish cache server address. 
 
-* Mediawiki had a bug since 2015, which is reported in https://phabricator.wikimedia.org/T132538, that does not recognizing $wgSquidServers address with port. Therefore effective setting would be: $wgSquidServers = array('127.0.0.1:8080'); $wgSquidServersNoPurge[] = "127.0.0.1";  .
+* Mediawiki had a bug since 2015, which is reported by one of our volunteer developer in https://phabricator.wikimedia.org/T132538, that does not recognizing $wgSquidServers address with port. Therefore effective setting would be: $wgSquidServers = array('127.0.0.1:8080'); $wgSquidServersNoPurge[] = "127.0.0.1";  .
 
 ## Security Issue
 At the time we wrote this intro, Cloudflare only offers GLOBAL API KEY toward users not in "Enterprise plan"($5000+). It is possible to acquire original server IP and many other sensitive info via GLOBAL API KEY. Therefore, it is highly suggested to set config.php with permission 400, and store it in a place not public (not accessible by nginx), as well as limit access to the port with strict firewall rule.
