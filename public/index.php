@@ -16,7 +16,7 @@ $key = new Cloudflare\API\Auth\APIKey($conf['apiEmail'], $conf['apiKey']);
 $adapter = new Cloudflare\API\Adapter\Guzzle($key);
 $zones = new Cloudflare\API\Endpoints\Zones($adapter);
 
-if (!in_array($host, $conf['hosts'])) {
+if (!isset($conf['hosts'][$host])) {
     throw new Exception("no host: ${host}");
 }
 
