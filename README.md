@@ -18,6 +18,6 @@
 * Mediawiki had a bug since 2015, which is reported in https://phabricator.wikimedia.org/T132538, that does not recognizing $wgSquidServers address with port. Therefore effective setting would be: $wgSquidServers = array('127.0.0.1:8080'); $wgSquidServersNoPurge[] = "127.0.0.1";  .
 
 ## Security Issue
-At the time we wrote this intro, Cloudflare only offers GLOBAL API KEY toward users not in "Enterprise plan"($5000+). It is possible to acquire original server IP and many other senstive info via GLOBAL API KEY. Therefore, it is highly suggested to set config.php with permission 400, and store it in a place not public (not accessible by nginx), as well as limit access to the port with stric firewall rule.
+At the time we wrote this intro, Cloudflare only offers GLOBAL API KEY toward users not in "Enterprise plan"($5000+). It is possible to acquire original server IP and many other sensitive info via GLOBAL API KEY. Therefore, it is highly suggested to set config.php with permission 400, and store it in a place not public (not accessible by nginx), as well as limit access to the port with strict firewall rule.
 
 # USE AT YOUR OWN RISK!
