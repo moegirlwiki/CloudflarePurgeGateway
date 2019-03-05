@@ -2,9 +2,9 @@
   "apiEmail": "",
   "apiKey": "",
   "hosts": {
-    "zh.moegirl.org": {
+    "www.example.com": {
       "zoneId": "",
-      "prefix": "https://zh.moegirl.org"
+      "prefix": "https://www.example.com"
     }
   },
   "dev": true
